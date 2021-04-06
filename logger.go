@@ -62,7 +62,7 @@ func Json(objs ...interface{}) {
         t := reflect.TypeOf(obj)
         if (t.Kind() == reflect.Struct) {
             js, _ := json.MarshalIndent(obj, "", "   ")
-            color.Info.Printf("INFO : %s :\n %s\n",now.Format(formatDateTime), js )
+            color.Info.Printf("%s\n", js )
         } else {
             color.Info.Printf("INFO : %s : %s %v %s\n", now.Format(formatDateTime),decorator, obj, decorator)
         }
