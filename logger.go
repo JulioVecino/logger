@@ -50,6 +50,12 @@ func Info(texts ...interface{}) {
     }
 }
 
+func Txt(texts ...interface{}) {
+    for _, text := range texts {
+        color.Info.Printf("%s\n", text )
+    }
+}
+
 func Json(objs ...interface{}) {
     now := time.Now()
     for _, obj := range objs {
